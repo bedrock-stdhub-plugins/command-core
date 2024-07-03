@@ -4,11 +4,11 @@ plugin:
   # The name of your plugin.
   # Will be displayed on enable, and be used as the plugin namespace.
   # All the plugin data will be stored at `plugins/[name]/`.
-  name: my-plugin
+  name: command-core
 
   # The description of your plugin.
   # Will be displayed in the plugin store (in the future).
-  description: My awesome plugin.
+  description: The core plugin for handling plugin-defined commands from players.
 
   # The version of your plugin.
   # Remember to edit this when you are going to publish a release.
