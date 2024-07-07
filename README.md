@@ -1,4 +1,4 @@
-# stdhub-plugin-command-core
+# command-core
 
 The core plugin for handling plugin-defined commands from players.
 
