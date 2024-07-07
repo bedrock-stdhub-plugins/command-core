@@ -12,7 +12,7 @@ plugin:
 
   # The version of your plugin.
   # Remember to edit this when you are going to publish a release.
-  version: 0.1.0
+  version: 0.2.0
 
 # The target Minecraft version of your plugin.
 # In other words, the version of Minecraft which you expect your plugin to run on.
