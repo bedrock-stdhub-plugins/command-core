@@ -4,6 +4,7 @@ export const pluginName = process.env.PLUGIN_NAME!;
 export const api = new StdhubPluginApi(pluginName);
 
 import { system, world } from '@minecraft/server';
+import { initPermCommand } from './perm-command';
 
 api.readRootConfig({
   commandPrefix: '.'
@@ -24,10 +25,11 @@ api.readRootConfig({
         {
           playerId: event.sender.id,
           playerName: event.sender.name,
+          playerIsOp: event.sender.isOp(),
           commandString
         }
       ).then(({ response: { status } }) => {
-        if (status === 404) {
+        if (status === 404 || status === 403) {
           event.sender.sendMessage(
             `§cUnknown command: ${commandName}. Please check that the command exists and you have permission to use it.`
           );
@@ -36,3 +38,5 @@ api.readRootConfig({
     });
   });
 });
+
+initPermCommand();
